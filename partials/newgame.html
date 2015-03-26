@@ -1,36 +1,10 @@
-<!DOCTYPE html>
-<html ng-app="gameApp">
-  <head>
-    <title>Score Board</title>
-    <link href="index.css" rel="stylesheet"/>
-    <script src="libs/underscore.js"></script>
-    <script src="libs/angular.js"></script>
-    <script src="libs/angular-ui-router.js"></script>
-    <script src="index.js"></script>
-    <script src="newGameController.js"></script>
-    <script src="gameListController.js"></script>
-  </head>
-  <body ui-view>
 
 
-    <header>
-      <h1>Score Board</h1>
-      <h4 class="cell columns4"><a ui-sref="newGame">New Player</a></h4>
-      <h4 class="cell columns4"><a ui-sref="newPlayer">New Game</a></h4>
-      <h4 class="cell columns4"><a ui-sref="listGame">List Games</a></h4>
-      <h4 class="cell columns4"><a ui-sref="listPlayer">List Players</a></h4>
-    </header>
-
-    <div class="content">
-
-      <div ui-view="main">
-      </div>
-
-      <div class="new-game-wrap" ng-controller="NewGameController">
+    <div class="new-game-wrap" ng-controller="NewGameController">
         <h1 class="center">Add a new game</h1>
 
         <div class="row center">
-        Game Name: <input type="text" ng-model="gameName" value="Name of Game">
+        	Game Name: <input type="text" ng-model="gameName" value="Name of Game">
         </div>
 
         <div class="row">
@@ -116,59 +90,5 @@
          
         </div>
 
-      </div> 
-
-      <!-- This will be game list view -->
-
-      <div class="game-list" ng-controller="GameListController">
-        <h1 class="center">List of Games</h1>
-        <div class="game-list-wrap" ng-repeat="item in gameListData">
-          <div class="row">
-             Name: {{item.game.name}}
-           </div>
-           Players: 
-            <div class="cell columns4" ng-repeat="item in item.players">
-              {{item.email}}
-            </div>
-        </div>
-        </div>
-
-      <!-- This will be player list view -->
-
-      <div class="game-list" ng-controller="PlayerListController">
-        <h1 class="center">List of Players</h1>
-        <div class="game-list-wrap" ng-repeat="item in playerListData">
-          <div class="row">
-             Name: {{player.name}}
-           </div>
-           Stats: 
-            <div class="cell columns4" ng-repeat="item in item.stats">
-              <div class="cell columns4">Wins: {{item.wins}}</div>
-               <div class="cell columns4">Losses: {{item.losses}}</div>
-            </div>
-        </div>
-        </div>
-
-        <!-- This will be create player view -->
-
-      <div class="new-player-wrap" ng-controller="NewPlayerController">
-        <div class="row">
-          <div class="columns4 cell right">
-            Name: 
-            </div>
-          <div class="columns4 cell center">
-            <input type="text" ng-model="playerOne" value="Player One">
-          </div>
-          <div class="columns4 cell right">
-            Email: 
-          </div>
-          <div class="columns4 cell center">
-            <input type="text" ng-model="playerOneScore" value="Player One Score">
-          </div>
-        </div>
-      </div>
-      
-    </div>
+     </div> 
     
-  </body>
-</html>

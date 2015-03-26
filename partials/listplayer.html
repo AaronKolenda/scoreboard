@@ -1,0 +1,13 @@
+<div class="game-list" ng-controller="PlayerListController">
+    <h1 class="center">List of Players</h1>
+    <div class="game-list-wrap" ng-repeat="item in playerListData">
+      <div class="row">
+         Name: {{player.name}}
+       </div>
+       Stats: 
+        <div class="cell columns4" ng-repeat="item in item.stats">
+          <div class="cell columns4">Wins: {{item.wins}}</div>
+           <div class="cell columns4">Losses: {{item.losses}}</div>
+        </div>
+    </div>
+</div>

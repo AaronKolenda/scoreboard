@@ -11,6 +11,25 @@ $scope.playerThreeScore;
 $scope.playerFour;
 $scope.playerFourScore;
 $scope.winner;
+$scope.created = false;
+$scope.gameData = {
+          id: 1,
+          name: "War",
+          players: [
+          {
+          id: 1,
+          email: "alex@example.com",
+          score: 0,
+          result: null
+          },
+          {
+          id: 2,
+          email: "bob@example.com",
+          score: 0,
+          result: null
+          }
+             ]
+  }
 
 $scope.addGame = function() {
 	var playersNamesScores = [{playerOne: $scope.playerOne, playerOneScore: $scope.playerOneScore},
@@ -23,14 +42,16 @@ $scope.addGame = function() {
 	$scope.new_game_data = {game_name: $scope.gameName, players: playersNamesScores, winner: $scope.winner};
 
 	console.log($scope.new_game_data);
+  $scope.created = true;
 }
 
 
   /*
 $http.post('/someUrl', $scope.new_game_data).
   success(function(data) {
-    // this callback will be called asynchronously
-    // when the response is available
+
+
+
   }).
   error(function(data, status, headers, config) {
     console.log("failed");
