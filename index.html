@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="gameApp">
+  <head>
+    <title>Score Board</title>
+    <link href="index.css" rel="stylesheet"/>
+    <script src="libs/underscore.js"></script>
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-ui-router.js"></script>
+    <script src="index.js"></script>
+    <script src="newGameController.js"></script>
+  </head>
+  <body ui-view>
+
+    <div ui-view="main">
+      
+    </div>
+
+
+    <header>
+      <h1>Score Board</h1>
+      <h4 class="cell columns4"><a ui-sref="newGame">New Player</a></h4>
+      <h4 class="cell columns4"><a ui-sref="newPlayer">New Game</a></h4>
+      <h4 class="cell columns4"><a ui-sref="listGame">List Games</a></h4>
+      <h4 class="cell columns4"><a ui-sref="listPlayer">List Players</a></h4>
+    </header>
+
+    <div class="content">
+      <div class="new-game-wrap" ng-controller="NewGameController">
+        <h1 class="center">Add a new game</h1>
+
+        <div class="row center">
+        Game Name: <input type="text" ng-model="gameName" value="Name of Game">
+        </div>
+
+        <div class="row">
+          <div class="columns4 cell right">
+            Player One: 
+            </div>
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerOne" value="Player One">
+          </div>
+          <div class="columns4 cell right">
+            Player One Score: 
+          </div>
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerOneScore" value="Player One Score">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns4 cell right">
+            Player Two:
+          </div> 
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerTwo" value="Player Two">
+          </div>
+
+          <div class="columns4 cell right">
+            Player Two Score:
+          </div> 
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerTwoScore" value="Player Two Score">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns4 cell right">
+            Player Three: 
+          </div>
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerThree" value="Player Three">
+          </div>
+          <div class="columns4 cell right">
+            Player Three Score:
+          </div>
+          <div class="columns4 cell center">
+             <input type="text" ng-model="playerThreeScore" value="Player Three Score">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns4 cell right">
+            Player Four: 
+          </div>
+          <div class="columns4 cell center">
+            <input type="text" ng-model="playerFour" value="Player Four">
+          </div>
+          <div class="columns4 cell right">
+            Player Four Score:
+          </div>
+          <div class="columns4 cell center">
+             <input type="text" ng-model="playerFourScore" value="Player Four Score">
+          </div>
+        </div>
+
+        <div class="row center">
+        Winner: <input type="text" ng-model="winner" value="Winner">
+        </div>
+
+        <div class="row center">
+        <a href="#"><button class="add-game" ng-click="addGame()">Submit</button></a>
+        </div>
+      </div>   
+      
+    </div>
+    
+  </body>
+</html>
