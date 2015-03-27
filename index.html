@@ -105,8 +105,8 @@
         </div>
 
         <div class="display-new-game" ng-show="created">
-          <div class="row">Game ID: {{$scope.gameData.id}}</div>
-          <div class="row">Name: {{$scope.gameData.name}}</div>
+          <div class="row">Game ID: {{gameData.id}}</div>
+          <div class="row">Name: {{gameData.name}}</div>
           <div class="players-list" ng-repeat="item in gameData.players">
             <ul>
               <li>{{item.id}}</li>
@@ -154,6 +154,7 @@
         <!-- This will be create player view -->
 
       <div class="new-player-wrap" ng-controller="NewPlayerController">
+        <h1 class="center">New Player</h1>
         <div class="row">
           <div class="columns4 cell right">
             Name: 
@@ -167,6 +168,10 @@
           <div class="columns4 cell center">
             <input type="text" ng-model="playerEmail" value="Player Email">
           </div>
+        </div>
+
+        <div class="row center">
+        <a href="#"><button class="add-game" ng-click="addPlayer()">Submit</button></a>
         </div>
 
         <div class="display-new-player" ng-show="created">

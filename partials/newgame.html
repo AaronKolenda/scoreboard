@@ -12,7 +12,9 @@
             Player One: 
             </div>
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerOne" value="Player One">
+            <select ng-repeat="item in playerListData">
+              <option value="{{item.id}}">{{item.name}}</option>
+            </select>
           </div>
           <div class="columns4 cell right">
             Player One Score: 
@@ -27,7 +29,9 @@
             Player Two:
           </div> 
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerTwo" value="Player Two">
+            <select ng-repeat="item in playerListData">
+              <option value="{{item.id}}">{{item.name}}</option>
+            </select>
           </div>
 
           <div class="columns4 cell right">
@@ -43,7 +47,9 @@
             Player Three: 
           </div>
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerThree" value="Player Three">
+            <select ng-repeat="item in playerListData">
+              <option value="{{item.id}}">{{item.name}}</option>
+            </select>
           </div>
           <div class="columns4 cell right">
             Player Three Score:
@@ -58,7 +64,9 @@
             Player Four: 
           </div>
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerFour" value="Player Four">
+            <select ng-repeat="item in playerListData">
+              <option value="{{item.id}}">{{item.name}}</option>
+            </select>
           </div>
           <div class="columns4 cell right">
             Player Four Score:
@@ -77,8 +85,8 @@
         </div>
 
         <div class="display-new-game" ng-show="created">
-          <div class="row">Game ID: {{$scope.gameData.id}}</div>
-          <div class="row">Name: {{$scope.gameData.name}}</div>
+          <div class="row">Game ID: {{gameData.id}}</div>
+          <div class="row">Name: {{gameData.name}}</div>
           <div class="players-list" ng-repeat="item in gameData.players">
             <ul>
               <li>{{item.id}}</li>
