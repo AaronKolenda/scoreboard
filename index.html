@@ -37,7 +37,7 @@
 
         <div class="row">
           <div class="columns4 cell right">
-            Player One: 
+            Player One Email: 
             </div>
           <div class="columns4 cell center">
             <input type="text" ng-model="playerOne" value="Player One">
@@ -52,7 +52,7 @@
 
         <div class="row">
           <div class="columns4 cell right">
-            Player Two:
+            Player Two Email:
           </div> 
           <div class="columns4 cell center">
             <input type="text" ng-model="playerTwo" value="Player Two">
@@ -68,7 +68,7 @@
 
         <div class="row">
           <div class="columns4 cell right">
-            Player Three: 
+            Player Three Email: 
           </div>
           <div class="columns4 cell center">
             <input type="text" ng-model="playerThree" value="Player Three">
@@ -83,7 +83,7 @@
 
         <div class="row">
           <div class="columns4 cell right">
-            Player Four: 
+            Player Four Email: 
           </div>
           <div class="columns4 cell center">
             <input type="text" ng-model="playerFour" value="Player Four">
@@ -124,6 +124,11 @@
 
       <div class="game-list" ng-controller="GameListController">
         <h1 class="center">List of Games</h1>
+
+        <div class="row center">
+        <a href="#"><button class="add-game" ng-click="listGames()">List All Games</button></a>
+        </div>
+
         <div class="game-list-wrap" ng-repeat="item in gameListData">
           <div class="row">
              Name: {{item.game.name}}
@@ -139,15 +144,15 @@
 
       <div class="game-list" ng-controller="PlayerListController">
         <h1 class="center">List of Players</h1>
+
+        <div class="row center">
+          <a href="#"><button class="add-game" ng-click="listPlayers()">List All Players</button></a>
+        </div>
+
         <div class="game-list-wrap" ng-repeat="item in playerListData">
           <div class="row">
-             Name: {{player.name}}
+             Name: {{item.player.email}}
            </div>
-           Stats: 
-            <div class="cell columns4" ng-repeat="item in item.stats">
-              <div class="cell columns4">Wins: {{item.wins}}</div>
-               <div class="cell columns4">Losses: {{item.losses}}</div>
-            </div>
         </div>
         </div>
 
