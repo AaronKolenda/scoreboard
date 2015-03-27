@@ -42,21 +42,19 @@ $scope.addGame = function() {
 	$scope.new_game_data = {game_name: $scope.gameName, players: playersNamesScores, winner: $scope.winner};
 
 	console.log($scope.new_game_data);
-  $scope.created = true;
-}
-
+  
 
   /*
-$http.post('/someUrl', $scope.new_game_data).
-  success(function(data) {
+  $http.post('/someUrl', $scope.new_game_data).
+    success(function(data) {
 
-
-
-  }).
-  error(function(data, status, headers, config) {
-    console.log("failed");
-  });*/
-
+    $scope.gameData = data;
+    $scope.created = true;
+    }).
+    error(function(data, status, headers, config) {
+      console.log("failed");
+    });*/
+}
 
 
 }])

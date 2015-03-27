@@ -1,17 +1,23 @@
 <div class="new-player-wrap" ng-controller="NewPlayerController">
   <div class="row">
-          <div class="columns4 cell right">
-            Name: 
-            </div>
-          <div class="columns4 cell center">
-            <input type="text" ng-model="playerOne" value="Player One">
-          </div>
-          <div class="columns4 cell right">
-            Email: 
-          </div>
-          <div class="columns4 cell center">
-            <input type="text" ng-model="playerOneScore" value="Player One Score">
-          </div>
+      <div class="columns4 cell right">
+        Name: 
+        </div>
+      <div class="columns4 cell center">
+        <input type="text" ng-model="playerName" value="Player Name">
+      </div>
+      <div class="columns4 cell right">
+        Email: 
+      </div>
+      <div class="columns4 cell center">
+        <input type="text" ng-model="playerEmail" value="Player Email">
+      </div>
+  </div>
+  <a href="#"><button class="add-player" ng-click="addPlayer()">Submit</button></a>
+
+  <div class="display-new-player" ng-show="created">
+    <div class="row">Name: {{playerData.id}}</div>
+    <div class="row">Email: {{playerData.name}}</div> 
   </div>
 </div>
     

@@ -1,4 +1,5 @@
-var gameApp = angular.module("gameApp", ["newGameController", "gameListController", "ui.router"])
+var gameApp = angular.module("gameApp", 
+  ["newGameController", "gameListController", "playerListController", "newPlayerController", "ui.router"])
 
 
 gameApp.config([ "$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider){

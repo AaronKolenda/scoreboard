@@ -9,6 +9,8 @@
     <script src="index.js"></script>
     <script src="newGameController.js"></script>
     <script src="gameListController.js"></script>
+    <script src="playerListController.js"></script>
+    <script src="newPlayerController.js"></script>
   </head>
   <body ui-view>
 
@@ -157,14 +159,19 @@
             Name: 
             </div>
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerOne" value="Player One">
+            <input type="text" ng-model="playerName" value="Player Name">
           </div>
           <div class="columns4 cell right">
             Email: 
           </div>
           <div class="columns4 cell center">
-            <input type="text" ng-model="playerOneScore" value="Player One Score">
+            <input type="text" ng-model="playerEmail" value="Player Email">
           </div>
+        </div>
+
+        <div class="display-new-player" ng-show="created">
+          <div class="row">Name: {{playerData.id}}</div>
+          <div class="row">Email: {{playerData.name}}</div> 
         </div>
       </div>
       

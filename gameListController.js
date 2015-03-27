@@ -1,11 +1,9 @@
 angular.module("gameListController", [])
 .controller("GameListController", ["$scope", function($scope){
 
-	//this controller is for getting a specific game and displaying it.
-
 	$scope.gameListData; 
 	/*
-	$http.post('/someUrl', $scope.new_game_data).
+	$http.get('/someUrl').
 	  success(function(data) {
 	    $scope.gameListData = data;
 	  }).
